@@ -35,3 +35,43 @@ def imprimir_cancion(cancion):
 
 
 # -Transacciones-
+
+# 1.- Agregar Canción-
+
+
+def agregar_cancion():
+    titulo = str(input("Ingrese el Titulo de la Canción: ")).strip()
+    while not validar_texto_vacio(titulo):
+        titulo = str(input("Ingrese el Titulo de la Canción: ")).strip()
+
+    artista = str(input("Ingrese nombre del Artista: ")).strip()
+    while not validar_texto_vacio(artista):
+        artista = str(input("Ingrese nombre del Artista: ")).strip()
+
+    while True:
+        try:
+            duracion = int(input("Ingrese la Duración de la Canción: "))
+            while not validar_duracion(duracion):
+                duracion = int(input("Ingrese la Duración de la Canción: "))
+            break
+        except:
+            print("Error, debe ingresar un Número.")
+
+    cancion = {
+        "Titulo": titulo,
+        "Artista": artista,
+        "Duración": duracion,
+        "Favorita": False,
+    }
+
+    canciones_list.append(cancion)
+    print("- Registro Almacenado Correctamente. -")
+
+
+# 2.- -Buscar Canción-
+
+# 3.- -Eliminar Canción-
+
+# 4.- -Marcar Como Favorita-
+
+# 5.- -Mostrar Canciones-
