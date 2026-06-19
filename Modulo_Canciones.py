@@ -72,7 +72,18 @@ def agregar_cancion():
 
 
 def buscar_cancion():
-    pass
+    titulo = str(input("Ingrese la Canción a Buscar: ")).strip()
+    while not validar_texto_vacio(titulo):
+        titulo = str(input("Ingrese la Canción a Buscar: ")).strip()
+
+    encontrado = False
+    for cancion in canciones_list:
+        if cancion["Titulo"] == titulo:
+            encontrado = True
+            imprimir_cancion(cancion)
+
+    if encontrado == False:
+        print("No hay Canciones con ese Titulo.")
 
 
 # 3.- -Eliminar Canción-
