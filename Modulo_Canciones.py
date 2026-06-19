@@ -90,7 +90,19 @@ def buscar_cancion():
 
 
 def eliminar_cancion():
-    pass
+
+    titulo = str(input("Ingrese La Canción a Eliminar: ")).strip()
+    while not validar_texto_vacio(titulo):
+        titulo = str(input("Ingrese La Canción a Eliminar: ")).strip()
+
+    encontrado = False
+    for cancion in canciones_list:
+        if cancion["Titulo"] == titulo:
+            encontrado = True
+            canciones_list.remove(cancion)
+
+    if encontrado == False:
+        print("No hay Canciones con ese Titulo.")
 
 
 # 4.- -Marcar Como Favorita-
