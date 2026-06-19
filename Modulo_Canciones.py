@@ -70,8 +70,31 @@ def agregar_cancion():
 
 # 2.- -Buscar Canción-
 
+
+def buscar_cancion():
+    pass
+
+
 # 3.- -Eliminar Canción-
+
+
+def eliminar_cancion():
+    pass
+
 
 # 4.- -Marcar Como Favorita-
 
+
+def marcar_favorita():
+    pass
+
+
 # 5.- -Mostrar Canciones-
+
+
+def mostrar_canciones():
+    if len(canciones_list) == 0:
+        print("No hay ninguna canción registrada.")
+    else:
+        for cancion in canciones_list:
+            imprimir_cancion(cancion)
